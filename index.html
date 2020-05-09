@@ -1,0 +1,3625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thetribeshop</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="style/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <script src="path/to/swiper.min.js"></script>
+  <link rel="stylesheet" href="path/to/swiper.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+  <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+</head>
+
+
+
+<style>
+  .d-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .align-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .flex-centerY-centerX {
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  body {
+    background-color: #f7f7f7;
+  }
+
+  .page-wrapper {
+    height: 10%;
+    display: table;
+  }
+
+  .page-wrapper .page-inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .el-wrapper {
+    bottom: 10px;
+    width: 200px;
+    padding: 15px;
+    margin: 15px auto;
+    background-color: #fff;
+  }
+
+  @media (max-width: 991px) {
+    .el-wrapper {
+      width: 245px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .el-wrapper {
+      width: 290px;
+      margin: 30px auto;
+    }
+  }
+
+  .el-wrapper:hover .h-bg {
+    left: 0px;
+  }
+
+  .el-wrapper:hover .price {
+    left: 20px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #818181;
+  }
+
+  .el-wrapper:hover .add-to-cart {
+    left: 50%;
+  }
+
+  .el-wrapper:hover .img {
+    webkit-filter: blur(7px);
+    -o-filter: blur(7px);
+    -ms-filter: blur(7px);
+    filter: blur(7px);
+    filter: progid:DXImageTransform.Microsoft.Blur(pixelradius='7', shadowopacity='0.0');
+    opacity: 0.4;
+  }
+
+  .el-wrapper:hover .info-inner {
+    bottom: 155px;
+  }
+
+  .el-wrapper:hover .a-size {
+    -webkit-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    transition-delay: 300ms;
+    bottom: 50px;
+    opacity: 1;
+  }
+
+  .el-wrapper .box-down {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .el-wrapper .box-up {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .el-wrapper .img {
+    padding: 20px 0;
+    -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+  }
+
+  .h-bg {
+    -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    width: 660px;
+    height: 100%;
+    background-color: #3f96cd;
+    position: absolute;
+    left: -659px;
+  }
+
+  .h-bg .h-bg-inner {
+    width: 50%;
+    height: 100%;
+    background-color: #464646;
+  }
+
+  .info-inner {
+    -webkit-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+    -o-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+    transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    position: absolute;
+    width: 100%;
+    bottom: 25px;
+  }
+
+  .info-inner .p-name,
+  .info-inner .p-company {
+    display: block;
+  }
+
+  .info-inner .p-name {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    color: #252525;
+  }
+
+  .info-inner .p-company {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #8c8c8c;
+  }
+
+  .a-size {
+    -webkit-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+    -o-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+    transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    position: absolute;
+    width: 100%;
+    bottom: -20px;
+    font-family: 'PT Sans', sans-serif;
+    color: #828282;
+    opacity: 0;
+  }
+
+  .a-size .size {
+    color: #252525;
+  }
+
+  .cart {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+  }
+
+  .cart .price {
+    -webkit-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    -o-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-delay: 100ms;
+    -o-transition-delay: 100ms;
+    transition-delay: 100ms;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #252525;
+  }
+
+  .cart .add-to-cart {
+    -webkit-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    -o-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-delay: 100ms;
+    -o-transition-delay: 100ms;
+    transition-delay: 100ms;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .cart .add-to-cart .txt {
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide {
+    height: 300px;
+    background: #882525;
+    line-height: 300px;
+    text-align: center;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 10px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  @media (max-width: 760px) {
+    .swiper-button-next {
+      right: 20px;
+      transform: rotate(90deg);
+    }
+
+    .swiper-button-prev {
+      left: 20px;
+      transform: rotate(90deg);
+    }
+  }
+
+  .card-container {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+  }
+
+  .card {
+    display: grid;
+    max-width: 450px;
+    /* max height: 250px; */
+  }
+
+  .card .button {
+    align-self: end;
+  }
+
+  .bich {
+    margin: 52px;
+
+  }
+
+  .container-mycss {
+    width: 300px;
+  }
+
+
+  /* Simple Card styles for prettying */
+
+  html {
+    font-size: 16px;
+    font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+  }
+
+  body {
+    background-color: #efefef;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .col-md-3 {
+    padding: 5px;
+  }
+
+  .card {
+    background-color: black;
+    box-shadow: -5px -5px 5px #2d3246;
+    border-radius: 0px;
+    /* height: 3.5cm; */
+    background-color: rgb(168, 162, 162);
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .prodocat {
+    background-color: salmon;
+    /* height: 950px;
+  width: 950px; */
+  }
+
+  .sahi {
+    margin: 23px 25px 26px 27px;
+    border: 23px;
+    padding: 23px 25px 26px 27px solid black;
+    max-width: 120px;
+  }
+
+  /* middle-section */
+  .popular-product-title {
+    font-family: serif;
+    color: black;
+    font-weight: 900;
+  }
+
+  .popular-products {
+    display: inline-block;
+    margin: 1rem 0.5rem;
+    width: 18rem;
+    height: 16rem;
+    /* border-radius: 15px; */
+    background-color: rgba(0, 0, 255, 0.6);
+    font-family: sans-serif;
+    font-style: oblique;
+    /* text-align: center; */
+    box-shadow: -1px -1px 1px grey, 4px 4px 3px rgba(1, 50, 67, 1);
+  }
+
+  .products:hover,
+  .popular-products:hover {
+    transform: scale(1.05);
+
+  }
+
+  .popular-products h6 {
+    color: white;
+  }
+
+  .popular {
+    text-align: center;
+    width: 100%;
+    text-size-adjust: 44px;
+  }
+
+  .popular a {
+    font-size: 9.2px;
+    color: white;
+    padding: 0.5rem;
+    opacity: 0.8;
+    text-decoration: none;
+    transition: font-size 1s;
+  }
+
+  .popular a:hover {
+    position: relative;
+    /* z-index: 1; */
+    font-size: 1.7rem;
+    text-decoration: none;
+    /* border-bottom: 3px solid rgb(31, 30, 30); */
+    opacity: 1;
+
+  }
+
+  .popular h1 {
+    background-color: #4c3c3c;
+    margin-top: 2.2rem;
+    padding-bottom: 1rem;
+  }
+
+  .Apparel-section,
+  .Accessories-section,
+  .HomeLiving-section,
+  .VandhanNaturals-section {
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  .Accessories-section,
+  .HomeLiving-section,
+  .VandhanNaturals-section {
+    display: none;
+  }
+
+  .products-img {
+    width: 18rem;
+    height: 12rem;
+  }
+
+  .products-img:hover {
+    opacity: 0.5;
+  }
+
+  /* popular categories */
+  .popular-categories {
+    text-align: center;
+    padding: 0.5rem;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  display: none;
+  }
+
+  .sath {
+    text-decoration: none;
+    text-align: right;
+    padding-left: 100px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 15px;
+  }
+
+  /* side navigation */
+  .side-navigation-top-part {
+    width: 289px;
+    height: px;
+    background-color: grey;
+  }
+
+  .side-navigation {
+    text-align: center;
+    border-right: 0.1rem solid gray;
+    position: absolute;
+    top: 0;
+    left: -400px;
+
+    background-color: white;
+    font-size: 1.5rem;
+    width: 29rem;
+    height: 100vh;
+    z-index: 100;
+  }
+
+  /* side navigation items */
+  .navigation-item {
+    display: inline-block;
+    width: 100%;
+    color: black;
+    text-align: left;
+    padding: 1rem 1rem 1rem 3rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid black;
+  }
+
+  /* side navigation closing button */
+  .close-navigation {
+    position: absolute;
+    top: 0.1rem;
+    left: 26.5rem;
+    font-weight: bolder;
+    border: none;
+    z-index: 100;
+  }
+
+  .tab-content {
+    background-color: white;
+  }
+
+  .tab-pane a {
+    color: black;
+
+    margin: 0.5rem auto;
+  }
+
+  .close-navigation:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    #hata {
+      display: none;
+    }
+
+  }
+
+  ;
+
+  @media (max-width: 0px) {
+    #phun {
+      height: 4.5cm;
+    }
+
+  }
+
+  ;
+
+  @media (min-width: 768px) {
+    #chuppa {
+      display: none;
+    }
+
+    #phonua {
+      display: none;
+    }
+
+  }
+</style>
+
+<body>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <body style="background-color: #2f4353;
+    background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);">
+    <div id=navbar class="navbar navbar-inverse" style="margin:0px; border-radius:0px; border:0px">
+      <div class="container-fluid " style="background-color: #e9bcb7;
+        background-image: linear-gradient(315deg, #e9bcb7 0%, #29524a 74%);">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="navbar-header ">
+              <button class="navbar-toggle menu-button navbar-toggler pull-left" data-target="#mobile_menu"
+                data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span
+                  class="icon-bar"></span></button>
+              <a href="#" class="navbar-brand">THETRIBESHOP</a>
+
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav middle-section">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Contact Us </a></li>
+                <li></li>
+                <li><a href="#" class="dropdown-toggle navbar-toggler pull-left" data-toggle="dropdown"><span
+                      class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
+                <li>
+                  <form class="form-inline d-flex justify-content-center md-form form-sm mt-0" id=phonua>
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+                      aria-label="Search" style="padding-top: 4px; height top: 15px ; margin:10px;">
+                  </form>
+                </li>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- yahan se dekhna -->
+    <div class="side-navigation">
+      <div class="side-navigation-top-part">
+        <div class=" popular">
+          <div class="container container-mycss">
+
+
+            <ul class="nav nav-tabs nav-tabs-mystyle" style="border:none">
+              <li class="active"><a id="g3" data-toggle="tab" href="#">Home</a></li>
+              <li><a data-toggle="tab" id="g4" href="#">Aparral</a></li>
+              <li><a data-toggle="tab" id="g5" href="#">Home decor</a></li>
+              <li><a data-toggle="tab" id="g6" href="#">Accessories</a></li>
+            </ul>
+          </div>
+          <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+              <!-- Home -->
+              <h3>Home</h3>
+              <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+              <a class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i class="fa fa-first-order"
+                  style="font-size:1.4rem;"></i>
+                Recommended</a>
+              <a class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i class="fa fa-gift"
+                  style="font-size:1.4rem;"></i>apparel</a>
+              <a class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i class="fa fa-first-order"
+                  style="font-size:1.4rem;"></i>Accessories</a>
+              <a class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i class="fa fa-address-card"
+                  style="font-size:1.4rem;"></i> Home
+                Living</a>
+              <a class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i class="fa fa-info-circle"
+                  style="font-size:1.4rem;"></i>
+                Essentials</a>
+            </div>
+
+
+
+            <div id="menu1" class="tab-pane ">
+              <h3>Apparels</h3>
+              <!-- Apparels -->
+              <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+              <a id='apparel-recommended-tab' class="navigation-item nav nav-tabs" data-toggle="tab"
+                href="#apparel recom"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>
+                recommended</a>
+              <a id='apparel-mens-tab' class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i
+                  class="fa fa-gift" style="font-size:1.4rem;"></i>men</a>
+              <a id='apparel-womens-tab' class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i
+                  class="fa fa-first-order" style="font-size:1.4rem;"></i> Women</a>
+
+              <a id='apparel-heritages-tab' class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i
+                  class="fa fa-first-order" style="font-size:1.4rem;"></i>heritage</a>
+              <a id='apparel-designers-tab' class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i
+                  class="fa fa-address-card" style="font-size:1.4rem;"></i>
+                designer</a>
+              <a id='apparel-kidss-tab' class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i
+                  class="fa fa-info-circle" style="font-size:1.4rem;"></i> kids</a>
+            </div>
+
+            <div id="menu2" class="tab-pane ">
+              <h3>Home decor</h3>
+              <!-- Home decor -->
+              <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+              <a id='homedecor-recommended-tab' class="navigation-item  nav nav-tabs" data-toggle="tab" href="#"><i
+                  class="fa fa-first-order" style="font-size:1.4rem;"></i> recommended</a>
+              <a id='homedecor-decoratives-tab' class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i
+                  class="fa fa-gift" style="font-size:1.4rem;"></i>decoratives</a>
+              <a id='homedecor-paintings-tab' class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i
+                  class="fa fa-first-order" style="font-size:1.4rem;"></i>paintings</a>
+              <a id='homedecor-homelinens-tab' class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i
+                  class="fa fa-first-order" style="font-size:1.4rem;"></i>Home linen</a>
+              <a id='homedecor-artifacts-tab' class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i
+                  class="fa fa-first-order" style="font-size:1.4rem;"></i>Artifacts</a>
+              <a id='homedecor-cutlerys-tab' class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i
+                  class="fa fa-first-order" style="font-size:1.4rem;"></i>Cutlery</a>
+
+            </div>
+            <div id="menu3" class="tab-pane">
+              <h3>Accessories</h3>
+
+
+              <!-- Accessories-->
+
+              <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+              <a id='Accessories-jewelerys-tab' class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i
+                  class="fa fa-first-order" style="font-size:1.4rem;"></i>jewelery</a>
+              <a id='Accessories-bags-tab' class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i
+                  class="fa fa-gift" style="font-size:1.4rem;"></i>bag</a>
+              <a id='Accessories-stationarys-tab' class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i
+                  class="fa fa-first-order" style="font-size:1.4rem;"></i>stationary</a>
+              <a id='Accessories-recommended-tab' class="navigation-item nav nav-tabs" data-toggle="tab" href="#"><i
+                  class="fa fa-address-card" style="font-size:1.4rem;"></i>recommended</a>
+
+            </div>
+
+            <!-- Recommended apparels sub section -->
+
+
+            <div id="apparel-recom" class="tab-pane">
+              <h3>Recommended Aparrels</h3>
+              <button id='g2' class="btn btn-primary">
+                << go back </button>
+                  <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Recomm
+                    apparel1</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Recomm
+                    apparel2</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Recomm
+                    apparel3</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-address-card" style="font-size:1.4rem;"></i>Recomm
+                    apparel4</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-info-circle" style="font-size:1.4rem;"></i> Recomm
+                    apparel5</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Recomm
+                    apparel6</a>
+
+            </div>
+
+            <!--  men apparels subsection -->
+
+            <div id="apparel-men" class="tab-pane">
+              <h3>Men's apparels</h3>
+              <button id='back-men' class="btn btn-primary">
+                << go back </button>
+                  <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>T
+                    shirt</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Pants</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Shirt</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-address-card"
+                      style="font-size:1.4rem;"></i>Shawl</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-info-circle" style="font-size:1.4rem;"></i>
+                    Scarf</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Muffler</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Dhoti</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Shorts</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Sweater</a>
+
+            </div>
+            <!-- womens apparel subsection -->
+            <div id="apparel-women" class="tab-pane">
+              <h3>Women's apparels</h3>
+              <button id='back-women' class="btn btn-primary">
+                << go back </button>
+                  <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>T
+                    shirt</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Pants</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Shirt</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-address-card"
+                      style="font-size:1.4rem;"></i>Shawl</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-info-circle" style="font-size:1.4rem;"></i>
+                    Scarf</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Muffler</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Lehanga</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Kurti</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Sweater</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Leggis</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Salwar
+                    Suit</a>
+
+            </div>
+
+            <div id="apparel-heritage" class="tab-pane">
+              <h3>Heritage</h3>
+              <button id='back-heritage' class="btn btn-primary">
+                << go back </button>
+                  <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Bagh
+                    &#038; Maheshwari</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Applique
+                    &#038; Tanka Work</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Eri
+                    &#038; Tussar</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-address-card"
+                      style="font-size:1.4rem;"></i>Bhandara</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-info-circle" style="font-size:1.4rem;"></i>
+                    Chanderi</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Kantha
+                    Embroidery</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Ikkat</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Mangalgiri</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Kalamkari</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Linen</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Pochampally</a>
+
+            </div>
+            <!-- desginer subsection -->
+            <div id="apparel-designer" class="tab-pane">
+              <h3>Designer</h3>
+              <button id='back-designer' class="btn btn-primary">
+                << go back </button>
+                  <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Ruma
+                    Devi X TheTribeShop</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Rosy Ahluwalia
+                    X TheTribeShop</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Ritu
+                    Beri X TheTribeShop</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-address-card" style="font-size:1.4rem;"></i>Tara
+                    Bhuyan X TheTribeShop</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-info-circle" style="font-size:1.4rem;"></i>Winky
+                    Singh X TheTribeShop</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Tara
+                    Bhuyan X TheTribeShop</a>
+
+
+            </div>
+
+            <div id="apparel-kids" class="tab-pane">
+              <h3>Kids</h3>
+              <button id='back-kids' class="btn btn-primary">
+                << go back </button>
+                  <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>T
+                    shirt</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Pants</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Shirt</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-address-card"
+                      style="font-size:1.4rem;"></i>Lower</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-info-circle"
+                      style="font-size:1.4rem;"></i>scarf</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>anime</a>
+
+
+            </div>
+
+            <!-- Accesoreise subsecftion -->
+            <!-- Recommended Accesoreise sub section -->
+
+
+            <div id="Accessories-recom" class="tab-pane">
+              <h3>Recommended Accessories</h3>
+              <button id='back-recom' class="btn btn-primary">
+                << go back </button>
+                  <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Recomm
+                    Accessories1</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Recomm
+                    Accessories2</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Recomm
+                    Accessories3</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-address-card" style="font-size:1.4rem;"></i>Recomm
+                    Accessories4</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-info-circle" style="font-size:1.4rem;"></i> Recomm
+                    Accessories5</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Recomm
+                    Accessories6</a>
+
+            </div>
+
+            <!-- jewelery Accessories subsection -->
+
+            <div id="Accessories-jewelery" class="tab-pane">
+              <h3>jewelery Accessories</h3>
+              <button id='back-jewelery' class="btn btn-primary">
+                << go back </button>
+                  <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Neckpiece</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Earrings</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Finger
+                    Rings</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-address-card"
+                      style="font-size:1.4rem;"></i>Bangles &#038; Bracelets</a>
+
+            </div>
+            <!-- bag accesires subsection -->
+            <div id="Accessories-bag" class="tab-pane">
+              <h3>Women's apparels</h3>
+              <button id='back-bag' class="btn btn-primary">
+                << go back </button>
+                  <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Purse</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Sling Bags</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Bottle
+                    Bags</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-address-card" style="font-size:1.4rem;"></i>Laptop
+                    Bags</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-info-circle"
+                      style="font-size:1.4rem;"></i>Shoulder Bags</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Mobile
+                    Pouch</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Wallet
+                    &#038; Clutches</a>
+
+            </div>
+            <!-- stationary Accessories subsection -->
+            <div id="Accessories-stationary" class="tab-pane">
+              <h3>Heritage</h3>
+              <button id='back-stationary' class="btn btn-primary">
+                << go back </button>
+                  <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Diary</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Pen Stands</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>File
+                    Folders</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-address-card" style="font-size:1.4rem;"></i>Key
+                    Rings</a>
+
+            </div>
+
+            <!-- home decor susecton -->
+
+
+            <!-- homedecor recommende -->
+            <div id="homedecor-recommend" class="tab-pane">
+              <h3>Recommended homedecor</h3>
+              <button id='back-recommend' class="btn btn-primary">
+                << go back </button>
+                  <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Recommended homedecor1</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Recommended
+                    homedecor2</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Recommended homedecor3</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-address-card"
+                      style="font-size:1.4rem;"></i>Recommended homedecor4</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-info-circle" style="font-size:1.4rem;"></i>
+                    Recommended homedecor5</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Recommended homedecor6</a>
+
+            </div>
+
+            <!-- home linen subsection -->
+
+            <div id="homedecor-homelinen" class="tab-pane">
+              <h3>Home linen</h3>
+              <button id='back-homelinen' class="btn btn-primary">
+                << go back </button>
+                  <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Bedsheets &#038; Bedcovers</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Cushion
+                    Covers</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Coasters</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-address-card"
+                      style="font-size:1.4rem;"></i>Curtains</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-info-circle" style="font-size:1.4rem;"></i> Floor
+                    Mats</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Table
+                    Mats</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Yoga
+                    Mats</a>
+            </div>
+            <!-- homedecor artifact subsection -->
+            <div id="homedecor-artifact" class="tab-pane">
+              <h3>Artifacts</h3>
+              <button id='back-artifact' class="btn btn-primary">
+                << go back </button>
+                  <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Dhokra
+                    Metal Crafts</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Blue
+                    Pottery</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Wood
+                    Craft</a>
+            </div>
+            <!-- homedecor painting subsection -->
+            <div id="homedecor-painting" class="tab-pane">
+              <h3>Painting</h3>
+              <button id='back-painting' class="btn btn-primary">
+                << go back </button>
+                  <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Bhil</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift"
+                      style="font-size:1.4rem;"></i>Pattachitra</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Warli</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-address-card"
+                      style="font-size:1.4rem;"></i>Saura</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-info-circle" style="font-size:1.4rem;"></i>
+                    Thangka</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order" style="font-size:1.4rem;"></i>Tribal
+                    Art</a>
+            </div>
+            <!-- decorative subsection -->
+            <div id="homedecor-decorative" class="tab-pane">
+              <h3>Decorative</h3>
+              <button id='back-decorative' class="btn btn-primary">
+                << go back </button>
+                  <span class="close-navigation" style="padding-left: 5px;">&#10005;</span>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Decorative</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-gift" style="font-size:1.4rem;"></i>Door
+                    Hanging</a>
+                  <a class="navigation-item" href="#"><i class="fa fa-first-order"
+                      style="font-size:1.4rem;"></i>Fans</a>
+            </div>
+
+            <!-- cutlery -->
+            <div id="homedecor-cutlery" class="tab-pane">
+              <h3>Cutlery</h3>
+              <button id='back-cutlery' class="btn btn-primary">
+                << go back </button>
+                  <a class="navigation-item" href="#"><i class="fa fa-info-circle" style="font-size:1.4rem;"></i>Jar</a>
+                  <a class="navigation-item " href="#"><i class="fa fa-info-circle" style="font-size:1.4rem;"></i>Grid
+                    wall stand</a>
+                  <a class="navigation-item " href="#"><i class="fa fa-info-circle"
+                      style="font-size:1.4rem;"></i>Trey</a>
+                  <a class="navigation-item " href="#"><i class="fa fa-info-circle"
+                      style="font-size:1.4rem;"></i>Bowl</a>
+                  <a class="navigation-item " href="#"><i class="fa fa-info-circle"
+                      style="font-size:1.4rem;"></i>Plates</a>
+                  <a class="navigation-item " href="#"><i class="fa fa-info-circle"
+                      style="font-size:1.4rem;"></i>Spoon</a>
+                  <a class="navigation-item " href="#"><i class="fa fa-info-circle"
+                      style="font-size:1.4rem;"></i>Plates</a>
+                  <a class="navigation-item " href="#"><i class="fa fa-info-circle"
+                      style="font-size:1.4rem;"></i>Plates</a>
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+    <div id=navbar class="navbar navbar-inverse middle-section"
+      style="margin:0px ;border-radius:0px; min-height: 0px; border:0px;">
+      <div class="container-fluid" style="background-color: #e9bcb7;
+        background-image: linear-gradient(315deg, #e9bcb7 0%, #29524a 74%);  ">
+        <div class="row">
+          <div class="col-lg-12">
+
+
+
+
+
+            <div class="navbar-collapse collapse" id="chuppa" style="padding-left: 170px;">
+              <ul class="nav navbar-nav">
+
+
+                <li><a href="#">Docra </a>
+                </li>
+
+                <li><a href="#">Men's wear </a>
+                </li>
+                <li><a href="#">Women's wear </a>
+                </li>
+                <li><a href="#">Home decor </a>
+                </li>
+                <li><a href="#">Bracelet </a>
+                </li>
+                <li><a href="#">Necklase </a>
+                </li>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="owl-carousel owl-theme middle-section banner">
+      <div class="item">
+        <img src="ban11.jpg" alt="">
+      </div>
+      <div class="item" style="width: 100%;">
+        <img src="addtional-offers.jpg" style="width:100%;" alt="">
+      </div>
+      <div class="item" style="width: 100%;">
+        <img src="ban33.jpg" style="width: 100%;  alt="">
+        </div>
+        <div class=" item" style="width: 100%;">
+        <img src="ban11.jpg" style="width:100%;" alt="">
+      </div>
+      <div class="item" style="width: 100%;">
+        <img src="addtional-offers.jpg" style="width: 100%;  alt="">
+         </div> <div class=" item" style="width: 100% ;">
+        <img src="ban11.jpg" style="width:100%;" alt="">
+      </div>
+      <div class="item" style="width: 100% ;">
+        <img src="ban33.jpg" style="width: 100%;  alt="">
+        </div>
+    </div>
+    <div class=" popular" id="hata">
+        <h1> <a href="#" class="Apparel">Apparel</a>
+          <a href="#" class="Accessories">Accessories</a>
+          <a href="#" class="HomeLiving">Home & living</a>
+          <a href="#" class="VandhanNaturals">Vandhan Naturals</a>
+        </h1>
+      </div>
+
+      <div class="container-fluid">
+        <div class="owl-carousel owl-theme middle-section">
+
+
+          <div class="item sahi" style="width: 100%;">
+            <img src="thegirlinroom105.jpeg" style="width: 100%; border: 9px salmon;" alt="">
+          </div>
+          <div class=" item sahi" style="width: 100%; height:100%">
+            <img src="keyhunters.jpeg" style="width:100%;" alt="">
+          </div>
+          <div class="item sahi" style="width: 100%;">
+            <img src="wish-i-.jpeg" style="width: 100%;" alt="">
+          </div>
+          <div class=" item sahi" style="width: 100% ;">
+            <img src="theeroadlesstravelled.jpeg" style="width:100%;" alt="">
+          </div>
+          <div class="item sahi" style="width: 100% ;">
+            <img src="thegirlinroom105.jpeg" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class=" container-fluid prodocat ">
+
+        <div class=" row">
+          <div class="col-md-3 col-xs-6 ">
+            <img class="card-img-cover img-rounded card " id="phun" src="apparel.png" alt="">
+          </div>
+          <div class="col-md-3 col-xs-6 ">
+            <img class="card-img-cover img-rounded card" id="phun" src="apparel.png" alt="">
+
+
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="card" id="phun">
+              <img class="card-img-cover img-rounded" id="phun" src="apparel.png" alt="">
+
+
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="card" id="phun">
+              <img class="card-img-cover img-rounded" id="phun" src="apparel.png" alt="">
+
+
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="card" id="phun">
+              <img class="card-img-cover img-rounded" id="phun" src="apparel.png" alt="">
+
+
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="card" id="phun">
+              <img class="card-img-cover img-rounded" id="phun" src="apparel.png" alt="">
+
+
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="card" id="phun">
+              <img class="card-img-cover img-rounded" id="phun" src="apparel.png" alt="">
+
+
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-6 ">
+            <div class="card" id="phun">
+              <img class="card-img-cover img-rounded" id="phun" src="apparel.png" alt="">
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+        <!-- Swiper -->
+        <div class="swiper-container" style="background-color: whitesmoke;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="container page-wrapper">
+                <div class="page-inner">
+                  <div class="row">
+                    <div class="el-wrapper">
+                      <div class="box-up">
+                        <img class="img" src="pro.jpeg" alt="">
+                        <div class="img-info">
+                          <div class="info-inner">
+                            <span class="p-name">I feel like Pablo</span>
+                            <span class="p-company">Yeezy</span>
+                          </div>
+                          <div class="a-size">sizes : <span class="size">S , M , L , XL</span></div>
+                        </div>
+                      </div>
+  
+                      <div class="box-down">
+                        <div class="h-bg">
+                          <div class="h-bg-inner"></div>
+                        </div>
+  
+                        <a class="cart" href="#">
+                          <span class="price">$120</span>
+                          <span class="add-to-cart">
+                            <span class="txt">Add in cart</span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container page-wrapper">
+                <div class="page-inner">
+                  <div class="row">
+                    <div class="el-wrapper">
+                      <div class="box-up">
+                        <img class="img" src="pro.jpeg" alt="">
+                        <div class="img-info">
+                          <div class="info-inner">
+                            <span class="p-name">I feel like Pablo</span>
+                            <span class="p-company">Yeezy</span>
+                          </div>
+                          <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                        </div>
+                      </div>
+  
+                      <div class="box-down">
+                        <div class="h-bg">
+                          <div class="h-bg-inner"></div>
+                        </div>
+  
+                        <a class="cart" href="#">
+                          <span class="price">$120</span>
+                          <span class="add-to-cart">
+                            <span class="txt">Add in cart</span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container page-wrapper">
+                <div class="page-inner">
+                  <div class="row">
+                    <div class="el-wrapper">
+                      <div class="box-up">
+                        <img class="img" src="pro.jpeg" alt="">
+                        <div class="img-info">
+                          <div class="info-inner">
+                            <span class="p-name">I feel like Pablo</span>
+                            <span class="p-company">Yeezy</span>
+                          </div>
+                          <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                        </div>
+                      </div>
+  
+                      <div class="box-down">
+                        <div class="h-bg">
+                          <div class="h-bg-inner"></div>
+                        </div>
+  
+                        <a class="cart" href="#">
+                          <span class="price">$120</span>
+                          <span class="add-to-cart">
+                            <span class="txt">Add in cart</span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container page-wrapper">
+                <div class="page-inner">
+                  <div class="row">
+                    <div class="el-wrapper">
+                      <div class="box-up">
+                        <img class="img" src="pro.jpeg" alt="">
+                        <div class="img-info">
+                          <div class="info-inner">
+                            <span class="p-name">I feel like Pablo</span>
+                            <span class="p-company">Yeezy</span>
+                          </div>
+                          <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                        </div>
+                      </div>
+  
+                      <div class="box-down">
+                        <div class="h-bg">
+                          <div class="h-bg-inner"></div>
+                        </div>
+  
+                        <a class="cart" href="#">
+                          <span class="price">$120</span>
+                          <span class="add-to-cart">
+                            <span class="txt">Add in cart</span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container page-wrapper">
+                <div class="page-inner">
+                  <div class="row">
+                    <div class="el-wrapper">
+                      <div class="box-up">
+                        <img class="img" src="pro.jpeg" alt="">
+                        <div class="img-info">
+                          <div class="info-inner">
+                            <span class="p-name">I feel like Pablo</span>
+                            <span class="p-company">Yeezy</span>
+                          </div>
+                          <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                        </div>
+                      </div>
+  
+                      <div class="box-down">
+                        <div class="h-bg">
+                          <div class="h-bg-inner"></div>
+                        </div>
+  
+                        <a class="cart" href="#">
+                          <span class="price">$120</span>
+                          <span class="add-to-cart">
+                            <span class="txt">Add in cart</span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container page-wrapper">
+                <div class="page-inner">
+                  <div class="row">
+                    <div class="el-wrapper">
+                      <div class="box-up">
+                        <img class="img" src="pro.jpeg" alt="">
+                        <div class="img-info">
+                          <div class="info-inner">
+                            <span class="p-name">I feel like Pablo</span>
+                            <span class="p-company">Yeezy</span>
+                          </div>
+                          <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                        </div>
+                      </div>
+  
+                      <div class="box-down">
+                        <div class="h-bg">
+                          <div class="h-bg-inner"></div>
+                        </div>
+  
+                        <a class="cart" href="#">
+                          <span class="price">$120</span>
+                          <span class="add-to-cart">
+                            <span class="txt">Add in cart</span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container page-wrapper">
+                <div class="page-inner">
+                  <div class="row">
+                    <div class="el-wrapper">
+                      <div class="box-up">
+                        <img class="img" src="pro.jpeg" alt="">
+                        <div class="img-info">
+                          <div class="info-inner">
+                            <span class="p-name">I feel like Pablo</span>
+                            <span class="p-company">Yeezy</span>
+                          </div>
+                          <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                        </div>
+                      </div>
+  
+                      <div class="box-down">
+                        <div class="h-bg">
+                          <div class="h-bg-inner"></div>
+                        </div>
+  
+                        <a class="cart" href="#">
+                          <span class="price">$120</span>
+                          <span class="add-to-cart">
+                            <span class="txt">Add in cart</span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container page-wrapper">
+                <div class="page-inner">
+                  <div class="row">
+                    <div class="el-wrapper">
+                      <div class="box-up">
+                        <img class="img" src="pro.jpeg" alt="">
+                        <div class="img-info">
+                          <div class="info-inner">
+                            <span class="p-name">I feel like Pablo</span>
+                            <span class="p-company">Yeezy</span>
+                          </div>
+                          <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                        </div>
+                      </div>
+  
+                      <div class="box-down">
+                        <div class="h-bg">
+                          <div class="h-bg-inner"></div>
+                        </div>
+  
+                        <a class="cart" href="#">
+                          <span class="price">$120</span>
+                          <span class="add-to-cart">
+                            <span class="txt">Add in cart</span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container page-wrapper">
+                <div class="page-inner">
+                  <div class="row">
+                    <div class="el-wrapper">
+                      <div class="box-up">
+                        <img class="img" src="pro.jpeg" alt="">
+                        <div class="img-info">
+                          <div class="info-inner">
+                            <span class="p-name">I feel like Pablo</span>
+                            <span class="p-company">Yeezy</span>
+                          </div>
+                          <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                        </div>
+                      </div>
+  
+                      <div class="box-down">
+                        <div class="h-bg">
+                          <div class="h-bg-inner"></div>
+                        </div>
+  
+                        <a class="cart" href="#">
+                          <span class="price">$120</span>
+                          <span class="add-to-cart">
+                            <span class="txt">Add in cart</span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container page-wrapper">
+                <div class="page-inner">
+                  <div class="row">
+                    <div class="el-wrapper">
+                      <div class="box-up">
+                        <img class="img" src="pro.jpeg" alt="">
+                        <div class="img-info">
+                          <div class="info-inner">
+                            <span class="p-name">I feel like Pablo</span>
+                            <span class="p-company">Yeezy</span>
+                          </div>
+                          <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                        </div>
+                      </div>
+  
+                      <div class="box-down">
+                        <div class="h-bg">
+                          <div class="h-bg-inner"></div>
+                        </div>
+  
+                        <a class="cart" href="#">
+                          <span class="price">$120</span>
+                          <span class="add-to-cart">
+                            <span class="txt">Add in cart</span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>0
+            </div>
+          </div>
+          <div class="container-fluid" style="background-color:w ; height: 55px;">
+    
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+  
+        <!-- Swiper JS -->
+        <script src="../package/js/swiper.min.js"></script>
+  
+        <!-- Initialize Swiper -->
+        <script>
+          var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            // init: false,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            breakpoints: {
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 5,
+                spaceBetween: 50,
+              },
+            }
+          });
+        </script>
+
+<!-- first wla end -->
+
+
+<!-- DIkkat -->
+
+
+<nav>
+  <div class="nav nav-tabs md-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+      aria-controls="nav-home" aria-selected="true">Home</a>
+    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+      aria-controls="nav-profile" aria-selected="false">Profile</a>
+    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+      aria-controls="nav-contact" aria-selected="false">Contact</a>
+  </div>
+</nav>
+<div class="tab-content pt-5" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro2.jpg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro2.jpg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro2.jpg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro2.jpg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro2.jpg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro2.jpg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro2.jpg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro2.jpg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro2.jpg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro2.jpg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>0
+        </div>
+      </div>
+      <div class="container-fluid" style="background-color:w ; height: 55px;">
+
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="../package/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        // init: false,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        }
+      });
+    </script>
+  </div>
+  <div class="tab-pane fade" id="profile">
+
+    <div class="swiper-slide">
+      <div class="container page-wrapper">
+        <div class="page-inner">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <img class="img" src="pro2.jpg" alt="">
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">I feel like Pablo</span>
+                    <span class="p-company">Yeezy</span>
+                  </div>
+                  <div class="a-size">sizes : <span class="size">S , M , L , XL</span></div>
+                </div>
+              </div>
+
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+
+                <a class="cart" href="#">
+                  <span class="price">$120</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Add in cart</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="container page-wrapper">
+        <div class="page-inner">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <img class="img" src="pro2.jpg" alt="">
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">I feel like Pablo</span>
+                    <span class="p-company">Yeezy</span>
+                  </div>
+                  <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                </div>
+              </div>
+
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+
+                <a class="cart" href="#">
+                  <span class="price">$120</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Add in cart</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="container page-wrapper">
+        <div class="page-inner">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <img class="img" src="pro2.jpg" alt="">
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">I feel like Pablo</span>
+                    <span class="p-company">Yeezy</span>
+                  </div>
+                  <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                </div>
+              </div>
+
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+
+                <a class="cart" href="#">
+                  <span class="price">$120</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Add in cart</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="container page-wrapper">
+        <div class="page-inner">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <img class="img" src="pro2.jpg" alt="">
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">I feel like Pablo</span>
+                    <span class="p-company">Yeezy</span>
+                  </div>
+                  <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                </div>
+              </div>
+
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+
+                <a class="cart" href="#">
+                  <span class="price">$120</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Add in cart</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="container page-wrapper">
+        <div class="page-inner">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <img class="img" src="pro2.jpg" alt="">
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">I feel like Pablo</span>
+                    <span class="p-company">Yeezy</span>
+                  </div>
+                  <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                </div>
+              </div>
+
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+
+                <a class="cart" href="#">
+                  <span class="price">$120</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Add in cart</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="container page-wrapper">
+        <div class="page-inner">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <img class="img" src="pro2.jpg" alt="">
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">I feel like Pablo</span>
+                    <span class="p-company">Yeezy</span>
+                  </div>
+                  <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                </div>
+              </div>
+
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+
+                <a class="cart" href="#">
+                  <span class="price">$120</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Add in cart</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="container page-wrapper">
+        <div class="page-inner">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <img class="img" src="pro2.jpg" alt="">
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">I feel like Pablo</span>
+                    <span class="p-company">Yeezy</span>
+                  </div>
+                  <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                </div>
+              </div>
+
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+
+                <a class="cart" href="#">
+                  <span class="price">$120</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Add in cart</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="container page-wrapper">
+        <div class="page-inner">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <img class="img" src="pro2.jpg" alt="">
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">I feel like Pablo</span>
+                    <span class="p-company">Yeezy</span>
+                  </div>
+                  <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                </div>
+              </div>
+
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+
+                <a class="cart" href="#">
+                  <span class="price">$120</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Add in cart</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="container page-wrapper">
+        <div class="page-inner">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <img class="img" src="pro2.jpg" alt="">
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">I feel like Pablo</span>
+                    <span class="p-company">Yeezy</span>
+                  </div>
+                  <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                </div>
+              </div>
+
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+
+                <a class="cart" href="#">
+                  <span class="price">$120</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Add in cart</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="container page-wrapper">
+        <div class="page-inner">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <img class="img" src="pro2.jpg" alt="">
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">I feel like Pablo</span>
+                    <span class="p-company">Yeezy</span>
+                  </div>
+                  <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                </div>
+              </div>
+
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+
+                <a class="cart" href="#">
+                  <span class="price">$120</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Add in cart</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>0
+    </div>
+  </div>
+  <div class="container-fluid" style="background-color:w ; height: 55px;">
+
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="../package/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    // init: false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 50,
+      },
+    }
+  });
+</script>
+  </div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro.jpeg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro.jpeg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro.jpeg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro.jpeg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro.jpeg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro.jpeg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro.jpeg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro.jpeg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro.jpeg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container page-wrapper">
+            <div class="page-inner">
+              <div class="row">
+                <div class="el-wrapper">
+                  <div class="box-up">
+                    <img class="img" src="pro.jpeg" alt="">
+                    <div class="img-info">
+                      <div class="info-inner">
+                        <span class="p-name">I feel like Pablo</span>
+                        <span class="p-company">Yeezy</span>
+                      </div>
+                      <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                  </div>
+
+                  <div class="box-down">
+                    <div class="h-bg">
+                      <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                      <span class="price">$120</span>
+                      <span class="add-to-cart">
+                        <span class="txt">Add in cart</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>0
+        </div>
+      </div>
+      <div class="container-fluid" style="background-color:w ; height: 55px;">
+
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+asdasfasf
+    <!-- Swiper JS -->
+    <script src="../package/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        // init: false,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        }
+      });
+    </script>
+  </div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+    <p>Sint sit mollit irure quis est nostrud cillum consequat Lorem esse do quis dolor esse fugiat sunt do. Eu
+      ex commodo veniam Lorem aliquip laborum occaecat qui Lorem esse mollit dolore anim cupidatat. Deserunt
+      officia id Lorem nostrud aute id commodo elit eiusmod enim irure amet eiusmod qui reprehenderit nostrud
+      tempor. Fugiat ipsum excepteur in aliqua non et quis aliquip ad irure in labore cillum elit enim.
+      Consequat aliquip incididunt ipsum et minim laborum laborum laborum et cillum labore. Deserunt
+      adipisicing cillum id nulla minim nostrud labore eiusmod et amet. Laboris consequat consequat commodo non
+      ut non aliquip reprehenderit nulla anim occaecat. Sunt sit ullamco reprehenderit irure ea ullamco Lorem
+      aute nostrud magna.</p>
+  </div>
+</div>
+
+   
+    
+    <script src=" js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+
+
+
+    <script>
+      $('.banner').owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 1800,
+        autoplayHoverPause: true,
+        loop: true,
+        navigation: true,
+        margin: 0,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 1
+          },
+          1000: {
+            items: 1
+          }
+        }
+      })
+      var owl = $('.banner');
+
+
+      //  apparel recommended 
+      $('#apparel-recommended-tab').click(function () {
+        // upr wla sub tab h
+        $('#apparel-recom').show();
+        // ye upr wla jo show krna vo tab h
+        $('#menu1').hide();
+        // ye jo tab k content jisse apn aaye vo tab h
+      });
+      // back button
+      $('#g2').click(function () {
+        $('#apparel-recom').hide();
+        $('#menu1').show();
+      });
+      //  home ko click krne pe baki sb hatke sirf home show ho
+      $('#g3').click(function () {
+        $('#apparel-recom').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click kren pe baki
+      $('#g4').click(function () {
+        $('#apparel-recom').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hom deco click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#apparel-recom').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+      // acce click krene pe baki gayab
+      $('#g6').click(function () {
+        $('#apparel-recom').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+      //  apparel mens 
+
+
+      $('#apparel-mens-tab').click(function () {
+        $('#apparel-men').show();
+        $('#menu1').hide();
+      });
+      // back button
+      $('#back-men').click(function () {
+        $('#apparel-men').hide();
+        $('#menu1').show();
+      });
+      // home click krne pe baki hide
+      $('#g3').click(function () {
+        $('#apparel-men').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click krne pe baki
+      $('#g4').click(function () {
+        $('#apparel-men').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hine decor click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#apparel-men').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+
+      // accesories click kren pe bakui gayab
+      $('#g6').click(function () {
+        $('#apparel-men').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+
+
+      //  apparel womens 
+
+
+      $('#apparel-womens-tab').click(function () {
+        $('#apparel-women').show();
+        $('#menu1').hide();
+      });
+      // back button
+      $('#back-women').click(function () {
+        $('#apparel-women').hide();
+        $('#menu1').show();
+      });
+      // home click krne pe baki hide
+      $('#g3').click(function () {
+        $('#apparel-women').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click krne pe baki
+      $('#g4').click(function () {
+        $('#apparel-women').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hine decor click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#apparel-women').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+
+      // accesories click kren pe bakui gayab
+      $('#g6').click(function () {
+        $('#apparel-women').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+      //  apparel heritage
+
+
+      $('#apparel-heritages-tab').click(function () {
+        $('#apparel-heritage').show();
+        $('#menu1').hide();
+      });
+      // back button
+      $('#back-heritage').click(function () {
+        $('#apparel-heritage').hide();
+        $('#menu1').show();
+      });
+      // home click krne pe baki hide
+      $('#g3').click(function () {
+        $('#apparel-heritage').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click krne pe baki
+      $('#g4').click(function () {
+        $('#apparel-heritage').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hine decor click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#apparel-heritage').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+
+      // accesories click kren pe bakui gayab
+      $('#g6').click(function () {
+        $('#apparel-heritage').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+      //  apparel desginer
+
+
+      $('#apparel-designers-tab').click(function () {
+        $('#apparel-designer').show();
+        $('#menu1').hide();
+      });
+      // back button
+      $('#back-designer').click(function () {
+        $('#apparel-designer').hide();
+        $('#menu1').show();
+      });
+      // home click krne pe baki hide
+      $('#g3').click(function () {
+        $('#apparel-designer').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click krne pe baki
+      $('#g4').click(function () {
+        $('#apparel-designer').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hine decor click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#apparel-designer').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+
+      // accesories click kren pe bakui gayab
+      $('#g6').click(function () {
+        $('#apparel-designer').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+
+
+
+      //  apparel kids
+
+
+      $('#apparel-kidss-tab').click(function () {
+        $('#apparel-kids').show();
+        $('#menu1').hide();
+      });
+      // back button
+      $('#back-kids').click(function () {
+        $('#apparel-kids').hide();
+        $('#menu1').show();
+      });
+      // home click krne pe baki hide
+      $('#g3').click(function () {
+        $('#apparel-kids').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click krne pe baki
+      $('#g4').click(function () {
+        $('#apparel-kids').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hine decor click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#apparel-kids').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+
+      // accesories click kren pe bakui gayab
+      $('#g6').click(function () {
+        $('#apparel-kids').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+      //  Homedecor recommended
+
+
+      $('#homedecor-recommended-tab').click(function () {
+        $('#homedecor-recommend').show();
+        $('#menu2').hide();
+      });
+      // back button
+      $('#back-recommend').click(function () {
+        $('#homedecor-recommend').hide();
+        $('#menu2').show();
+      });
+      // home click krne pe baki hide
+      $('#g3').click(function () {
+        $('#homedecor-recommend').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click krne pe baki
+      $('#g4').click(function () {
+        $('#homedecor-recommend').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hine decor click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#homedecor-recommend').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+
+      // accesories click kren pe bakui gayab
+      $('#g6').click(function () {
+        $('#homedecor-recommend').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+      //  Homedecor linen
+
+
+      $('#homedecor-homelinens-tab').click(function () {
+        $('#homedecor-homelinen').show();
+        $('#menu2').hide();
+      });
+      // back button
+      $('#back-homelinen').click(function () {
+        $('#homedecor-homelinen').hide();
+        $('#menu2').show();
+      });
+      // home click krne pe baki hide
+      $('#g3').click(function () {
+        $('#homedecor-homelinen').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click krne pe baki
+      $('#g4').click(function () {
+        $('#homedecor-homelinen').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hine decor click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#homedecor-homelinen').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+
+      // accesories click kren pe bakui gayab
+      $('#g6').click(function () {
+        $('#homedecor-homelinen').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+
+
+
+
+      //  Homedecor artifact
+
+
+      $('#homedecor-artifacts-tab').click(function () {
+        $('#homedecor-artifact').show();
+        $('#menu2').hide();
+      });
+      // back button
+      $('#back-artifact').click(function () {
+        $('#homedecor-artifact').hide();
+        $('#menu2').show();
+      });
+      // home click krne pe baki hide
+      $('#g3').click(function () {
+        $('#homedecor-artifact').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click krne pe baki
+      $('#g4').click(function () {
+        $('#homedecor-artifact').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hine decor click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#homedecor-artifact').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+
+      // accesories click kren pe bakui gayab
+      $('#g6').click(function () {
+        $('#homedecor-artifact').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+
+
+
+
+
+      //  Homedecor painting
+
+
+      $('#homedecor-paintings-tab').click(function () {
+        $('#homedecor-painting').show();
+        $('#menu2').hide();
+      });
+      // back button
+      $('#back-painting').click(function () {
+        $('#homedecor-painting').hide();
+        $('#menu2').show();
+      });
+      // home click krne pe baki hide
+      $('#g3').click(function () {
+        $('#homedecor-painting').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click krne pe baki
+      $('#g4').click(function () {
+        $('#homedecor-painting').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hine decor click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#homedecor-painting').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+
+      // accesories click kren pe bakui gayab
+      $('#g6').click(function () {
+        $('#homedecor-painting').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+      //  Homedecor cutlery
+
+
+      $('#homedecor-cutlerys-tab').click(function () {
+        $('#homedecor-cutlery').show();
+        $('#menu2').hide();
+      });
+      // back button
+      $('#back-cutlery').click(function () {
+        $('#homedecor-cutlery').hide();
+        $('#menu2').show();
+      });
+      // home click krne pe baki hide
+      $('#g3').click(function () {
+        $('#homedecor-cutlery').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click krne pe baki
+      $('#g4').click(function () {
+        $('#homedecor-cutlery').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hine decor click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#homedecor-cutlery').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+
+      // accesories click kren pe bakui gayab
+      $('#g6').click(function () {
+        $('#homedecor-cutlery').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+
+
+
+      //  Homedecor decorative
+
+
+      $('#homedecor-decoratives-tab').click(function () {
+        $('#homedecor-decorative').show();
+        $('#menu2').hide();
+      });
+      // back button
+      $('#back-decorative').click(function () {
+        $('#homedecor-decorative').hide();
+        $('#menu2').show();
+      });
+      // home click krne pe baki hide
+      $('#g3').click(function () {
+        $('#homedecor-decorative').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click krne pe baki
+      $('#g4').click(function () {
+        $('#homedecor-decorative').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hine decor click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#homedecor-decorative').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+
+      // accesories click kren pe bakui gayab
+      $('#g6').click(function () {
+        $('#homedecor-decorative').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+
+      // Accessories jewelery
+
+
+      $('#Accessories-jewelerys-tab').click(function () {
+        $('#Accessories-jewelery').show();
+        $('#menu3').hide();
+      });
+      // back button
+      $('#back-jewelery').click(function () {
+        $('#Accessories-jewelery').hide();
+        $('#menu3').show();
+      });
+      // home click krne pe baki hide
+      $('#g3').click(function () {
+        $('#Accessories-jewelery').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click krne pe baki
+      $('#g4').click(function () {
+        $('#Accessories-jewelery').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hine decor click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#Accessories-jewelery').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+
+      // accesories click kren pe bakui gayab
+      $('#g6').click(function () {
+        $('#Accessories-jewelery').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+
+      // Accessories bag
+
+
+      $('#Accessories-bags-tab').click(function () {
+        $('#Accessories-bag').show();
+        $('#menu3').hide();
+      });
+      // back button
+      $('#back-bag').click(function () {
+        $('#Accessories-bag').hide();
+        $('#menu3').show();
+      });
+      // home click krne pe baki hide
+      $('#g3').click(function () {
+        $('#Accessories-bag').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click krne pe baki
+      $('#g4').click(function () {
+        $('#Accessories-bag').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hine decor click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#Accessories-bag').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+
+      // accesories click kren pe bakui gayab
+      $('#g6').click(function () {
+        $('#Accessories-bag').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+
+      // Accessories recommend
+
+
+      $('#Accessories-recommended-tab').click(function () {
+        $('#Accessories-recom').show();
+        $('#menu3').hide();
+      });
+      // back button
+      $('#back-recom').click(function () {
+        $('#Accessories-recom').hide();
+        $('#menu3').show();
+      });
+      // home click krne pe baki hide
+      $('#g3').click(function () {
+        $('#Accessories-recom').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click krne pe baki
+      $('#g4').click(function () {
+        $('#Accessories-recom').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hine decor click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#Accessories-recom').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+
+      // accesories click kren pe bakui gayab
+      $('#g6').click(function () {
+        $('#Accessories-recom').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+      // Accessories stationary
+
+
+      $('#Accessories-stationarys-tab').click(function () {
+        $('#Accessories-stationary').show();
+        $('#menu3').hide();
+      });
+      // back button
+      $('#back-stationary').click(function () {
+        $('#Accessories-stationary').hide();
+        $('#menu3').show();
+      });
+      // home click krne pe baki hide
+      $('#g3').click(function () {
+        $('#Accessories-stationary').hide();
+        $('#home').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // apparel click krne pe baki
+      $('#g4').click(function () {
+        $('#Accessories-stationary').hide();
+        $('#menu1').show();
+        $('#home').hide();
+        $('#menu2').hide();
+        $('#menu3').hide();
+      });
+      // hine decor click kren pe baki gayab
+      $('#g5').click(function () {
+        $('#Accessories-stationary').hide();
+        $('#menu2').show();
+        $('#menu1').hide();
+        $('#home').hide();
+        $('#menu3').hide();
+      });
+
+      // accesories click kren pe bakui gayab
+      $('#g6').click(function () {
+        $('#Accessories-stationary').hide();
+        $('#menu3').show();
+        $('#menu1').hide();
+        $('#menu2').hide();
+        $('#home').hide();
+      });
+
+
+
+
+      // for seond prodict
+      $('.owl-carousel').owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 1800,
+        autoplayHoverPause: true,
+        loop: true,
+        navigation: true,
+        margin: 0,
+        responsive: {
+          0: {
+            items: 2
+          },
+          700: {
+            items: 4
+          },
+          1000: {
+            items: 6
+          }
+        }
+      })
+      var owl = $('.owl-carousel');
+
+      $(window).on('scroll', function () {
+        if ($('.side-navigation').css('left') == '0px') {
+          $('.side-navigation').animate({ left: '-400px' });
+        }
+        if ($('.search-part').css('display') == 'block') {
+          $('.search-part').slideUp();
+        }
+      });
+      $('.menu-button').on('click', function () {
+        if ($('.side-navigation').css('left') == '-400px') {
+          $('.side-navigation').animate({ left: '0px' });
+        }
+        else {
+          $('.side-navigation').animate({ left: '-400px' });
+        }
+      });
+      $('.close-navigation').on('click', function () {
+        $('.side-navigation').animate({ left: '-400px' });
+      })
+      $('.middle-section').on('click', function () {
+        $('.search-part').slideUp();
+        $('.side-navigation').animate({ left: '-400px' });
+      });
+
+    </script>
+
+  </body>
+
+</html>
