@@ -1648,9 +1648,14 @@
 
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="padding-left: 4em;"  >
   <li class="nav-item">
+    <a class="nav-link active" id="pills-ghar-tab"  data-toggle="pill" href="#pills-ghar" role="tab"
+      aria-controls="pills-ghar" aria-selected="true" style="font-size: large; color: black;">Home</a>
+  </li>
+  <li class="nav-item">
     <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
       aria-controls="pills-home" aria-selected="true" style="font-size: large; color: black;">Women</a>
   </li>
+ 
   <li class="nav-item">
     <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
       aria-controls="pills-profile" aria-selected="false" style="font-size: large; color: black;">Men</a>
@@ -1663,16 +1668,16 @@
 
 
 <div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+  <div class="tab-pane fade in show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" style="display: block;"> 
 
 
-  <div class="swiper-container" style="background-color: whitesmoke;" id="homehta" >
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
+  <div class="swiper-container" style="background-color: whitesmoke;" id="homehta"  >
+    <div class="swiper-wrapper"  >
+      <div class="swiper-slide"  >
         <div class="container page-wrapper">
           <div class="page-inner">
             <div class="row">
-              <div class="el-wrapper">
+              <div class="el-wrapper"style="display: block;">
                 <div class="box-up">
                   <img class="img" src="pro.jpeg" alt="">
                   <div class="img-info">
@@ -1996,7 +2001,7 @@
 
 
 
-    <div class="tab-pane fade tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+    <div class="tab-pane fade in show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 
     <div class="swiper-container" style="background-color: whitesmoke;" id="profilehta">
       <div class="swiper-wrapper">
@@ -2311,7 +2316,7 @@
 <!-- ye hau last wla -->
 
 
-    <div class="tab-pane fade tab-pane fade show active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+    <div class="tab-pane fade in show active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" >
 
 
     <div class="swiper-container"  style="background-color: whitesmoke;" id="contacthta">
@@ -2644,6 +2649,17 @@
       })
       var owl = $('.banner');
 // tabs kmlie
+
+$('#pills-ghar-tab').click(function () {
+          $('#pills-profile').show();
+          $('##pills-contact').show();
+       
+          $('#home').show();
+          // ye jo tab k content jisse apn aaye vo tab h
+        });
+
+
+
  $('#pills-home-tab').click(function () {
           $('#profilehta').hide();
           $('#contacthta').hide();
@@ -2651,6 +2667,15 @@
           $('#homehta').show();
           // ye jo tab k content jisse apn aaye vo tab h
         });
+
+        $('#pills-ghar-tab').click(function () {
+          $('#profilehta').show();
+          $('#contacthta').show();
+       
+          $('#homehta').show();
+          // ye jo tab k content jisse apn aaye vo tab h
+        });
+
 
           $('#pills-profile-tab').click(function () {
           $('#homehta').hide();
@@ -2663,8 +2688,8 @@
         $('#pills-contact-tab').click(function () {
           $('#homehta').hide();
           $('#profilehta').hide();
-          $('#profilehta').hide();
-          $('#hometa').hide();
+          $('#pills-profile').hide();
+          $('#pills-home').hide();
           $('#contacthta').show();
           // ye jo tab k content jisse apn aaye vo tab h
         }); 
